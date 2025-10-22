@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Us | BrightSteps Clinic</title>
+  <meta name="description" content="Contact BrightSteps Clinic to book an intake consultation or ask a question." />
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <meta property="og:title" content="Contact BrightSteps Clinic" />
+  <meta property="og:description" content="Book an intake consultation or ask a question." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/assets/img/logo.svg" />
+  <meta property="og:url" content="/contact.html" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact BrightSteps Clinic",
+    "url": "/contact.html"
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container navbar">
+      <a class="brand" href="/index.html">
+        <img src="/assets/img/logo.svg" width="36" height="36" alt="BrightSteps logo" />
+        BrightSteps Clinic
+      </a>
+      <nav>
+        <button class="mobile-nav-toggle" aria-controls="primary-nav" aria-expanded="false">Menu</button>
+        <div id="primary-nav" class="nav-links" role="navigation">
+          <a href="/index.html">Home</a>
+          <a href="/about.html">About</a>
+          <a href="/services.html">Services</a>
+          <a href="/autism-education.html">Autism</a>
+          <a href="/team.html">Team</a>
+          <a href="/faq.html">FAQ</a>
+          <a href="/contact.html" class="btn btn-primary">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section hero">
+      <div class="container">
+        <h1>Contact us</h1>
+        <p class="section-subtitle">We'd love to learn about your family and how we can help.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container grid grid-2">
+        <form id="contact-form" class="card" data-email="info@yourclinic.com" data-handler="mailto">
+          <h2>Send a message</h2>
+          <div class="form-row">
+            <label>First name<input class="input" name="name" autocomplete="given-name" required></label>
+            <label>Email<input class="input" name="email" type="email" autocomplete="email" required></label>
+          </div>
+          <div class="form-row">
+            <label>Phone<input class="input" name="phone" type="tel" autocomplete="tel"></label>
+            <label>Subject<input class="input" name="subject" value="New enquiry via website"></label>
+          </div>
+          <label>Message<textarea class="input" name="message" rows="6" required></textarea></label>
+          <p class="help">Submitting will open your email app if no server handler is configured.</p>
+          <button class="btn btn-primary mt-2" type="submit">Send</button>
+        </form>
+        <div class="card">
+          <h2>Clinic details</h2>
+          <p>BrightSteps Clinic<br/>123 Care Avenue<br/>Your City, ST 00000</p>
+          <p><strong>Phone</strong>: +1 (555) 123-4567</p>
+          <p><strong>Email</strong>: <a href="mailto:info@yourclinic.com">info@yourclinic.com</a></p>
+          <p class="muted">Parking and accessibility: step-free access, quiet waiting area, and sensory-friendly spaces.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer section-sm">
+    <div class="container cols">
+      <div>
+        <a class="brand" href="/index.html">
+          <img src="/assets/img/logo.svg" width="36" height="36" alt="BrightSteps logo" />
+          BrightSteps Clinic
+        </a>
+        <p class="muted mt-2">123 Care Avenue, Your City, ST 00000<br/>+1 (555) 123-4567</p>
+      </div>
+      <div>
+        <strong>Learn</strong>
+        <ul>
+          <li><a href="/autism-education.html">About autism</a></li>
+          <li><a href="/faq.html">FAQs</a></li>
+          <li><a href="/services.html">Services</a></li>
+        </ul>
+      </div>
+      <div>
+        <strong>Company</strong>
+        <ul>
+          <li><a href="/about.html">About us</a></li>
+          <li><a href="/team.html">Team</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container mt-2">
+      <p class="muted">© <span id="y"></span> BrightSteps Clinic. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="/assets/js/main.js" defer></script>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
