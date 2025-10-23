@@ -1,9 +1,10 @@
 /* Global Styles for ASD Clinic Website */
 :root {
-  --brand-primary: #2563eb; /* blue-600 */
-  --brand-primary-600: #1d4ed8;
-  --brand-accent: #7c3aed; /* violet-600 */
-  --brand-accent-600: #6d28d9;
+  /* Light, welcoming palette */
+  --brand-primary: #10b981; /* emerald-500 */
+  --brand-primary-600: #059669; /* emerald-600 */
+  --brand-accent: #f59e0b; /* amber-500 */
+  --brand-accent-600: #d97706; /* amber-600 */
   --text-primary: #0f172a; /* slate-900 */
   --text-secondary: #334155; /* slate-700 */
   --text-on-dark: #ffffff;
@@ -13,19 +14,11 @@
   --success: #16a34a;
   --warning: #d97706;
   --danger: #dc2626;
-  --focus: #f59e0b;
+  --focus: var(--brand-accent);
   --max-width: 1200px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --text-primary: #e2e8f0;
-    --text-secondary: #cbd5e1;
-    --bg-base: #0b1220;
-    --bg-muted: #0f172a;
-    --border: #1f2937;
-  }
-}
+/* Enforce light theme regardless of OS preference */
 
 /* A modern, minimal CSS reset */
 * { box-sizing: border-box; }
@@ -52,6 +45,16 @@ input, button, textarea, select { font: inherit; color: inherit; }
 .nav-links a { color: var(--text-secondary); text-decoration: none; padding: .5rem .6rem; border-radius: .5rem; }
 .nav-links a:hover, .nav-links a[aria-current="page"] { color: var(--text-primary); background: var(--bg-muted); }
 
+/* Accessible focus styles */
+a:focus-visible,
+button:focus-visible,
+.btn:focus-visible,
+.nav-links a:focus-visible,
+.mobile-nav-toggle:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+
 .mobile-nav-toggle { display: none; background: transparent; border: 1px solid var(--border); padding: .5rem .6rem; border-radius: .5rem; }
 @media (max-width: 800px) {
   .mobile-nav-toggle { display: inline-flex; }
@@ -67,7 +70,7 @@ input, button, textarea, select { font: inherit; color: inherit; }
 .btn-ghost:hover { color: var(--text-primary); background: var(--bg-muted); }
 
 /* Hero */
-.hero { background: linear-gradient(135deg, color-mix(in oklab, var(--brand-primary) 12%, transparent), color-mix(in oklab, var(--brand-accent) 10%, transparent)); }
+.hero { background: linear-gradient(135deg, color-mix(in oklab, var(--brand-primary) 15%, transparent), color-mix(in oklab, var(--brand-accent) 12%, transparent)); }
 .hero .content { display: grid; grid-template-columns: 1.2fr .8fr; gap: 2rem; align-items: center; }
 @media (max-width: 900px) { .hero .content { grid-template-columns: 1fr; } }
 .hero h1 { font-size: clamp(1.8rem, 3vw + 1rem, 3rem); margin: 0 0 .6rem; line-height: 1.2; }
